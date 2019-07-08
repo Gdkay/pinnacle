@@ -6,7 +6,7 @@
 }
 
 .page-header h1 a {
-    color: #ffffff;
+    color: white;
     font-size:36pt;
     text-decoration:none;
 }
@@ -32,11 +32,7 @@ h1,h2,h3,h4{
     color: #000000;
 }
 
-/* if the link is visited , you can use this code   
-.post  h1 a:visited{
-    color: purple;
-}
-*/
+
 
 .post-form-blog textarea {
     width: 100%;
@@ -45,4 +41,11 @@ h1,h2,h3,h4{
 
 .post-form-blog  .btn-primary{
     float: right;
+}
+
+.top-menu{
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
 }
