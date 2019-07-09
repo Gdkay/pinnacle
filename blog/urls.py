@@ -1,6 +1,6 @@
 from django.urls import path, include
 from . import views
-from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
     #for 127.0.0.1:8000-->local
@@ -27,7 +27,6 @@ urlpatterns = [
     #pinnacle.com/post/1/publish --> online
     path('post/<int:pk>/publish', views.post_publish, name='post_publish'),
 
-    #for 127.0.0.1:8000/accounts/login --> local
-    #pinnacle.com/accounts/login --> online
-    path('accounts/' , include('django.contrib.auth.urls') ) ,  
+
+
 ]
