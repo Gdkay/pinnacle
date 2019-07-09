@@ -27,6 +27,10 @@ urlpatterns = [
     #pinnacle.com/post/1/publish --> online
     path('post/<int:pk>/publish', views.post_publish, name='post_publish'),
 
+    #for 127.0.0.1:8000/post/1/comment --> local
+    #pinnacle.com/post/1/comment --> online
+    path('post/<int:pk>/comment', views.add_comment_to_post, name='add_comment_to_post'),
+
 
 
 ]
