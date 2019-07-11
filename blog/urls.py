@@ -43,4 +43,8 @@ urlpatterns = [
     # pinnacle.com/post/comment/1/approve --> online
     path('comment/<int:pk>/approve/', views.comment_approve, name='comment_approve'),
 
+    # for 127.0.0.1:8000/signup --> local
+    # pinnacle.com/signup --> online
+    path('signup/', views.signup, name='signup'),
+
 ]
