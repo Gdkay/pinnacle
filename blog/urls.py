@@ -19,6 +19,10 @@ urlpatterns = [
     #pinnacle.com/post/1/edit --> online
     path('post/<int:pk>/edit', views.post_edit, name='post_edit'),
 
+    #for 127.0.0.1:8000/post/1/delete --> local
+    #pinnacle.com/post/1/delete --> online
+    path('post/<int:pk>/delete', views.post_delete, name='post_delete'),
+
     #for 127.0.0.1:8000/drafts --> local
     #pinnacle.com/drafts --> online
     path('drafts/', views.post_draft_list, name='post_draft_list'),

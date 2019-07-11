@@ -47,6 +47,12 @@ def post_edit(request, pk):
          stuff_for_frontend = {'form': form, 'post': post}
     return render(request, 'blog/post_edit.html', stuff_for_frontend)
 
+@login_required
+def post_delete(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.delete()
+    return redirect('post_list')
+
 
 @login_required
 def post_draft_list(request):
@@ -59,7 +65,7 @@ def post_draft_list(request):
 def post_publish(request,pk):
     post = get_object_or_404(Post, pk=pk)
     post.publish()
-    return redirect('post_detail',pk=pk)
+    return redirect('post_detail', pk=pk)
 
 @login_required
 def add_comment_to_post(request, pk):
